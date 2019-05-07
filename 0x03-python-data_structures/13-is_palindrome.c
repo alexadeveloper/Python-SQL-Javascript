@@ -38,7 +38,7 @@ int is_palindrome(listint_t **head)
 {
 	unsigned int nodes, count;
 	listint_t *copy;
-	
+
 	copy = reverse_listint(head);
 	count = 0;
 	for (nodes = 0; *head != NULL; nodes++)
