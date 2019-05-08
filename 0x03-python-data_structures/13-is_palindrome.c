@@ -45,7 +45,7 @@ int is_palindrome(listint_t **head)
 	{
 		if ((*head)->n != copy->n)
 		{
-			return (1);
+			return (0);
 		}
 		else
 		{
@@ -54,5 +54,5 @@ int is_palindrome(listint_t **head)
 			copy = copy->next;
 		}
 	}
-return (0);
+return (1);
 }
