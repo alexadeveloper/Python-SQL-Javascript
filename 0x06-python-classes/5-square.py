@@ -38,7 +38,7 @@ class Square:
 
         area = self.__size ** 2
         return area
-    
+
     def my_print(self):
         """print is stdout the suare"""
 
