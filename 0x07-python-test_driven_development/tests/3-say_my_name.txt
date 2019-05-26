@@ -1,0 +1,51 @@
+tests 3-say_my_name.py
+***********************
+
+This print the fist and last name.
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Documentation
+---------------
+
+	>>> module = __import__("3-say_my_name").__doc__
+
+    ``say_my_name("John", "Smith")``
+
+Case 1:
+    the first name and last name are string
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+    >>>
+
+------------------------------------
+
+Errors
+======
+
+Case 1:
+    first_name is not a string
+    >>> say_my_name(12, "White")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+    >>>
+
+-------------------------------------------
+
+Case 2:
+    last_name is not a string
+    >>> say_my_name("White", 12)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+    >>>
+
+-----------------------------------------
+
+Case 3:
+    other structures
+    >>> say_my_name(['J', 'A'], "Sandoval")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+-----------------------------------------
