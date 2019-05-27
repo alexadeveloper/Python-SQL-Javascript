@@ -1,0 +1,35 @@
+tests 5-text-identation.py
+***********************
+
+This prints a text with 2 new lines after each of these characters: ., ? and :
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Documentation
+---------------
+
+	>>> module = __import__("5-text_indentation").__doc__
+
+    ``text_indentation("""Lorem ipsum dolor sit amet, elit.""")``
+
+Case 1:
+    the text is a str
+
+	>>> text_indentation("Hola. como estas")
+	Hola.
+        como estas
+    >>>
+
+------------------------------------
+
+Errors
+======
+
+Case 1:
+    the text is not a str
+    >>> text_indentation(5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+    >>>
+
+-------------------------------------------
