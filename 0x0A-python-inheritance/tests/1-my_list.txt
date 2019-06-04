@@ -1,0 +1,49 @@
+tests 1-my_list.py
+----------------------
+
+Prints the list, ascending sort. 
+
+	>>> MyList = __import__('1-my_list').MyList
+
+    ``mylista.print_sorted()``
+
+Case 1:
+    Empty List
+
+	>>> mylista = MyList()
+    >>> print(mylista)
+	[]
+    >>> mylista.print_sorted()
+    []
+    >>>
+
+--------------------------------------
+
+Case 2:
+    Only one int
+
+    >>> mylista = MyList()
+    >>> mylista.append(1)
+    >>> print(mylista)
+    [1]
+    >>> mylista.print_sorted()
+    [1]
+    >>>
+
+------------------------------------
+
+Case 3:
+    More integer
+
+    >>> mylista = MyList()
+    >>> mylista.append(1)
+    >>> mylista.append(5)
+    >>> mylista.append(3)
+    >>> mylista.append(4)
+    >>> print(mylista)
+    [1, 5, 3, 4]
+    >>> mylista.print_sorted()
+    [1, 3, 4, 5]
+    >>>
+ 
+------------------------------------
