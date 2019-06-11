@@ -12,9 +12,6 @@ class TestBase(unittest.TestCase):
     def test_doc(self):
         self.assertTrue(len(base.__doc__) > 0)
 
-    def test_class_doc(self):
-        self.assertTrue(len(Base.__doc__) > 0)
-
     def test_id(self):
         b1 = Base(12)
         self.assertEqual(b1.id, 12)
