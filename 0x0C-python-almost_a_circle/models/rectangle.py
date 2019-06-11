@@ -70,7 +70,11 @@ class Rectangle(Base):
     def display(self):
         alto = self.__height
         ancho = self.__width
+        for y in range(self.__y):
+            print()
         for i in range(alto):
+            for x in range(self.__x):
+                print(" ", end='')
             for j in range(ancho):
                 print("#", end='')
                 if j == (ancho - 1):
