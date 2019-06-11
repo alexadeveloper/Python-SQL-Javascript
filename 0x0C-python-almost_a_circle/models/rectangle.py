@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """class Rectangle"""
-
-
 from models.base import Base
 
 
 class Rectangle(Base):
     """ class Rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """inicializa class Rectangle"""
         super().__init__(id)
@@ -16,7 +15,7 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        """change str""""
+        """change str"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format
                 (self.id, self.__x, self.__y, self.__width, self.__height))
 
@@ -93,3 +92,34 @@ class Rectangle(Base):
                 print("#", end='')
                 if j == (ancho - 1):
                     print("")
+
+    def update(self, *args, **kwargs):
+        """method update and kargs"""
+        argumentos = len(args)
+        if argumentos > 0:
+            for a in argumentos:
+                if a == 0:
+                    self.id = args[a]
+                if a == 1:
+                    self.width = args[a]
+                if a == 2:
+                    self.height = args[a]
+                if a == 3:
+                    self.x = args[a]
+                if a == 4:
+                    self.y = args[a]
+        else:
+            kargumentos = len(kwargs)
+            if kargumentos > 0:
+                keys = kwargs.keys()
+                for k in keys:
+                    if k == 'id':
+                        self.id = kwargs[k]
+                    if k == 'width':
+                        self.width = kwargs[k]
+                    if k == 'height':
+                        self.height = kwargs[k]
+                    if k == 'x':
+                        self.x = kwargs[k]
+                    if k == 'y':
+                        self.y = kwargs[k]
