@@ -38,3 +38,10 @@ class Base:
         with open("{}.json".format(cls.__name__), mode='w', encoding='utf-8')\
                 as jsonfile:
             jsonfile.write(myjson)
+
+    def from_json_string(json_string):
+        mylist = []
+        if json_string is None or json_string is []:
+            return mylist
+        else:
+            return json.loads(json_string)
