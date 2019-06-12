@@ -46,3 +46,12 @@ class Base:
             return mylist
         else:
             return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """create"""
+        if cls.__name == "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
