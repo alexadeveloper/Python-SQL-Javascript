@@ -35,6 +35,6 @@ class Base:
             for i in list_objs:
                 mylist.append(i.to_dictionary())
         myjson = Base.to_json_string(mylist)
-        with open("{}.json".format(cls.__name___), mode='w', encoding='utf-8')\
-                as file:
-            file.write(myjson)
+        with open("{}.json".format(cls.__name__), mode='w', encoding='utf-8')\
+                as jsonfile:
+            jsonfile.write(myjson)
