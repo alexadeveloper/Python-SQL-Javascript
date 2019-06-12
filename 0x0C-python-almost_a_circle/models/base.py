@@ -40,6 +40,7 @@ class Base:
             jsonfile.write(myjson)
 
     def from_json_string(json_string):
+        """from string to json"""
         mylist = []
         if json_string is None or json_string is []:
             return mylist
