@@ -49,9 +49,9 @@ class Base:
 
     def create(cls, **dictionary):
         """create"""
-        if cls.__name == "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        if cls.__name == "Square":
+        if cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
