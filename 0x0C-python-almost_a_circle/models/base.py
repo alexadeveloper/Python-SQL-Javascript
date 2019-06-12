@@ -39,6 +39,7 @@ class Base:
                 as jsonfile:
             jsonfile.write(myjson)
 
+    @staticmethod
     def from_json_string(json_string):
         """from string to json"""
         mylist = []
@@ -47,6 +48,7 @@ class Base:
         else:
             return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         """create"""
         if cls.__name__ == "Rectangle":
