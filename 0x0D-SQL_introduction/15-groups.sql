@@ -1,2 +1,2 @@
 -- list the count records with the same score
-SELECT score, COUNT(id) as number FROM second_table GROUP BY score;
+SELECT score, COUNT(id) as number FROM second_table GROUP BY score DESC;
