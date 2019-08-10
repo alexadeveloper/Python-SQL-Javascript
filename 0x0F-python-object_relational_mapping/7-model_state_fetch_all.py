@@ -17,5 +17,5 @@ if __name__ == "__main__":
     sesion = Session(motor)
     estados = sesion.query(State).order_by(State.id.asc()).all()
     for estado in estados:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(estado.id, estado.name))
     sesion.close()
