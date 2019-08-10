@@ -3,7 +3,7 @@
 lists all states from the database
 """
 import MySQLdb
-from sys import import argv
+from sys import argv
 
 if __name__ == '__main__':
 
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     hosting = "localhost"
     puerto = 3306
 
-    db = MySQLdb.connect(host=hosting, port=3306, user= usuario,
+    db = MySQLdb.connect(host=hosting, port=3306, user=usuario,
                          passwd=contrase, db=basedatos)
     conex = db.cursor()
     sqlquery = "SELECT * FROM states ORDER BY id ASC"
