@@ -17,10 +17,10 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host=hosting, port=3306, user=usuario,
                          passwd=contrase, db=basedatos)
     conex = db.cursor()
-    sql = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(estado)
-    conex.execute(sql)
+    sql = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
+    conex.execute(sql, (estado,))
     filas = conex.fetchall()
     for fila in filas:
-        print(fila)
+            print(fila)
     conex.close()
     db.close()
