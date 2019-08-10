@@ -16,10 +16,7 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host=hosting, port=3306, user=usuario,
                          passwd=contrase, db=basedatos)
     conex = db.cursor()
-    sqlquery = "SELECT *
-    FROM states
-    WHERE name LIKE 'm_d%'
-    ORDER BY id ASC"
+    sqlquery = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     conex.execute(sqlquery)
     filas = conex.fetchall()
     for fila in filas:
