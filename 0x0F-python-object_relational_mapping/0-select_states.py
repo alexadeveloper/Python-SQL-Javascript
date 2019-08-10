@@ -19,7 +19,7 @@ if __name__ == '__main__':
     sqlquery = "SELECT * FROM states ORDER BY id ASC"
     conex.execute(sqlquery)
     filas = conex.fetchall()
-    for row in rows:
-        print(row)
+    for fila in filas:
+        print(fila)
     conex.close()
     db.close()
