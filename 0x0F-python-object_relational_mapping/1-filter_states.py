@@ -20,6 +20,7 @@ if __name__ == '__main__':
     conex.execute(sqlquery)
     filas = conex.fetchall()
     for fila in filas:
-        print(fila)
+        if fila[1][0] == 'N':
+            print(fila)
     conex.close()
     db.close()
