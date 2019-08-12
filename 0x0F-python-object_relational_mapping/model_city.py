@@ -17,4 +17,4 @@ class City(Base):
     id = Column(Integer, autoincrement=True, unique=True,
                 nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, nullable=True, ForeignKey(State.id))
+    state_id = Column(Integer, ForeignKey(State.id), nullable=True)
