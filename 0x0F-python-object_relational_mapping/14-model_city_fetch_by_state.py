@@ -16,7 +16,7 @@ if __name__ == "__main__":
                           (usuario, clave, basedatos), pool_pre_ping=True)
     Base.metadata.create_all(motor)
     sesion = Session(motor)
-    consulta = sesion.query(City, State).filter(City.state_id == State.id)
+    consulta = sesion.query(City, State).filter(City.state_id == State.id)\
     .order_by(City.id.asc()).all()
     for ciudades, estados in consulta:
         print("{}: ({}) {}".format(estados.name, ciudades.id, ciudades.name))
