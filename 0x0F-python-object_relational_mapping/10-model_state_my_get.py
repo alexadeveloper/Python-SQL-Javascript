@@ -16,9 +16,9 @@ if __name__ == "__main__":
                           (usuario, clave, basedatos), pool_pre_ping=True)
     Base.metadata.create_all(motor)
     sesion = Session(motor)
-    estado = sesion.query(State).filter(State.name == name).first()
+    estado = sesion.query(State).filter(State.name == estad).first()
     if estado is not None:
-        print("{}".format(state.id))
+        print("{}".format(estado.id))
     else:
         print("Not found")
     sesion.close()
