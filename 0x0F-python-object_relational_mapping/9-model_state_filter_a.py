@@ -15,7 +15,7 @@ if __name__ == "__main__":
                           (usuario, clave, basedatos), pool_pre_ping=True)
     Base.metadata.create_all(motor)
     sesion = Session(motor)
-    for estado in sesion.query(State).order_by(State.id.asc()).all()
-    if 'a' in estado.name:
-        print("{}: {}".format(estado.id, estado.name))
+    for estado in sesion.query(State).order_by(State.id.asc()).all():
+        if 'a' in estado.name:
+            print("{}: {}".format(estado.id, estado.name))
     sesion.close()
