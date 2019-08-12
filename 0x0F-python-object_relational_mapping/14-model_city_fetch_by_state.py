@@ -8,7 +8,6 @@ from model_state import Base, State
 from model_city import City
 
 if __name__ == "__main__":
-
     usuario = argv[1]
     clave = argv[2]
     basedatos = argv[3]
@@ -17,7 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(motor)
     sesion = Session(motor)
     consulta = sesion.query(City, State).filter(City.state_id == State.id)\
-    .order_by(City.id.asc()).all()
+                                        .order_by(City.id.asc()).all()
     for ciudades, estados in consulta:
         print("{}: ({}) {}".format(estados.name, ciudades.id, ciudades.name))
     sesion.close()
