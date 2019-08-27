@@ -9,7 +9,8 @@ if __name__ == '__main__':
     if len(argv) == 1:
         rta = requests.post(url, data={'q': ""})
     if len(argv) > 1:
-        rta = requests.post(url, data={'q': letter})
+        letra = argv[1]
+        rta = requests.post(url, data={'q': letra})
     try:
         jdict = rta.json()
         if jdict == {}:
