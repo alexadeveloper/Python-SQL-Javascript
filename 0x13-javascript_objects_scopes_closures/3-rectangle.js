@@ -7,8 +7,9 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print () {
-    let str='';
+    let str = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
         str = str + 'X';
